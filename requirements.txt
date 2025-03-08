@@ -253,6 +253,7 @@ regex @ file:///opt/concourse/worker/volumes/live/92c80cd7-7907-4d3e-4d09-20e3cc
 requests @ file:///opt/conda/conda-bld/requests_1641824580448/work
 requests-file @ file:///Users/ktietz/demo/mc3/conda-bld/requests-file_1629455781986/work
 requests-oauthlib==2.0.0
+rest-framework-authtoken==0.1.2
 rope @ file:///opt/conda/conda-bld/rope_1643788605236/work
 rsa @ file:///tmp/build/80754af9/rsa_1614366226499/work
 Rtree @ file:///opt/concourse/worker/volumes/live/18283f9b-719e-45b1-7f3a-937f49358be4/volume/rtree_1618420836397/work
