@@ -1,0 +1,34 @@
+# Python bytecode and caches
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Virtual environments
+env/
+venv/
+ENV/
+
+# SQLite database files (no longer needed in production)
+*.sqlite3
+db.sqlite3
+
+# Django static files (collected for deployment, not versioned)
+staticfiles/
+
+# Logs and temporary files
+*.log
+*.pid
+
+# Local environment files
+.env
+*.env
+
+# IDE-specific files
+.idea/  # PyCharm
+.vscode/  # VS Code
+
+# macOS/Windows artifacts
+.DS_Store
+Thumbs.db
