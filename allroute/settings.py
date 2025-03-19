@@ -104,16 +104,24 @@ WSGI_APPLICATION = "allroute.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": os.environ.get("PGDATABASE", "allroute_db"),
-        "USER": os.environ.get("PGUSER", "allroute_user"),
-        "PASSWORD": os.environ.get("PGPASSWORD", "allroute_pass"),
-        "HOST": os.environ.get("PGHOST", "localhost"),
-        "PORT": os.environ.get("PGPORT", "5432"),
+if os.environ.get("RAILWAY_ENVIRONMENT"):
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.postgresql",
+            "NAME": os.environ.get("PGDATABASE", "allroute_db"),
+            "USER": os.environ.get("PGUSER", "allroute_user"),
+            "PASSWORD": os.environ.get("PGPASSWORD", "allroute_pass"),
+            "HOST": os.environ.get("PGHOST", "localhost"),
+            "PORT": os.environ.get("PGPORT", "5432"),
     }
 }
+else:
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.sqlite3",
+            "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
+        }
+    }
 
 
 # Password validation
